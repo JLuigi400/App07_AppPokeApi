@@ -12,7 +12,7 @@ data class Pokemon(
 
     val sprites: Sprite,
     val cries: Aullido,
-    val stats: StatBase,
-    val type: List<Types>,
+    val stats: List<StatBase>,
+    val types: List<Types>,
     val species: Species,
 )

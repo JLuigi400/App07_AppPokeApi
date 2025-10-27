@@ -12,6 +12,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import dagger.hilt.android.AndroidEntryPoint
+import uacj.mx.app07_apppokeapi.ui.controladores.MenuPrincipal
 import uacj.mx.app07_apppokeapi.ui.pantallas.PantallaPrincipal
 import uacj.mx.app07_apppokeapi.ui.theme.App07_AppPokeApiTheme
 
@@ -22,9 +23,7 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             App07_AppPokeApiTheme {
-                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    PantallaPrincipal(modificador = Modifier.padding(innerPadding))
-                }
+                MenuPrincipal()
             }
         }
     }
@@ -34,6 +33,6 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun GreetingPreview() {
     App07_AppPokeApiTheme {
-        PantallaPrincipal()
+        MenuPrincipal()
     }
 }

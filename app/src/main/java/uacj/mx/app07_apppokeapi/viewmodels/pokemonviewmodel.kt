@@ -20,22 +20,11 @@ class PokemonViewModel @Inject constructor(
 ) : ViewModel() {
     private var estado = mutableStateOf("Cargando")
 
+    public val pokemon: State<List<Pokemon>> = repositorio.pokemon
+
     init {
-    }
-
-    fun descargar(){
-        viewModelScope.launch {
-            val primer_pokemon = conexion_server.descargar_pokemon(1)
-            Log.v("Primer Descarga", "Descargando datos de ${primer_pokemon.name}")
-        }
-
-    }
-/*
-    private val pokemon: State<List<Pokemon>> = repositorio.pokemon
-
-    init{
         for(indice_pokemon in 1..50){
-            descargar_pokemon(indice_pokemon)
+            descargar_pokemon((indice_pokemon))
         }
     }
 
@@ -53,6 +42,6 @@ class PokemonViewModel @Inject constructor(
 
             repositorio.pokemon.value = lista
         }
+
     }
-*/
 }
