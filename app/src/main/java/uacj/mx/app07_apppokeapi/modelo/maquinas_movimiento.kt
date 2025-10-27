@@ -1,5 +1,8 @@
 package uacj.mx.app07_apppokeapi.modelo
 
+import uacj.mx.app07_apppokeapi.modelo.maquinas_mov.ContestType
+import uacj.mx.app07_apppokeapi.modelo.maquinas_mov.DamageClass
+
 data class MT(
     val id: Int,
     val name: String,
@@ -12,17 +15,7 @@ data class MT(
     val contest_type: List<ContestType>,
     val damage_class: List<DamageClass>,
 
-)
-
-data class ContestType(
-    val name: String,
-    val url: String,
-)
-
-data class DamageClass(
-    val name: String,
-    val url: String,
-)
+    )
 
 /*
 Maquinas Movimiento

@@ -2,6 +2,7 @@ package uacj.mx.app07_apppokeapi.modelo
 
 import uacj.mx.app07_apppokeapi.modelo.pokemon.Aullido
 import uacj.mx.app07_apppokeapi.modelo.pokemon.Habilidad
+import uacj.mx.app07_apppokeapi.modelo.pokemon.LocationArea
 import uacj.mx.app07_apppokeapi.modelo.pokemon.Species
 import uacj.mx.app07_apppokeapi.modelo.pokemon.Sprite
 import uacj.mx.app07_apppokeapi.modelo.pokemon.StatBase

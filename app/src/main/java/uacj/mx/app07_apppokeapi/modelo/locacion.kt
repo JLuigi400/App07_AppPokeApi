@@ -1,15 +1,12 @@
 package uacj.mx.app07_apppokeapi.modelo
 
+import uacj.mx.app07_apppokeapi.modelo.locacion.Region
+
 data class Location(
     val id: Int,
     val name: String,
 
     val region: List<Region>,
-)
-
-data class Region(
-    val name: String,
-    val url: String,
 )
 
 /*
