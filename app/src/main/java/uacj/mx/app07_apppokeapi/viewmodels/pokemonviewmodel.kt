@@ -1,5 +1,6 @@
 package uacj.mx.app07_apppokeapi.viewmodels
 
+import android.util.Log
 import androidx.compose.runtime.State
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.toMutableStateList
@@ -10,14 +11,26 @@ import jakarta.inject.Inject
 import kotlinx.coroutines.launch
 import uacj.mx.app07_apppokeapi.modelo.Pokemon
 import uacj.mx.app07_apppokeapi.repositorio_api.RepositorioPokemon
+import uacj.mx.app07_apppokeapi.repositorio_api.api_conexion.InterfazPokemonAPI
 
 @HiltViewModel
 class PokemonViewModel @Inject constructor(
-    private val repositorio: RepositorioPokemon
-    private val conxeion_server: InterfazPokemonAPI
+    private val repositorio: RepositorioPokemon,
+    private val conexion_server: InterfazPokemonAPI
 ) : ViewModel() {
     private var estado = mutableStateOf("Cargando")
 
+    init {
+    }
+
+    fun descargar(){
+        viewModelScope.launch {
+            val primer_pokemon = conexion_server.descargar_pokemon(1)
+            Log.v("Primer Descarga", "Descargando datos de ${primer_pokemon.name}")
+        }
+
+    }
+/*
     private val pokemon: State<List<Pokemon>> = repositorio.pokemon
 
     init{
@@ -30,7 +43,7 @@ class PokemonViewModel @Inject constructor(
         var pokemon: Pokemon? = null
 
         viewModelScope.launch {
-            pokemon = conxeion_server.descargar_pokemon(id)
+            pokemon = conexion_server.descargar_pokemon(id)
 
             val lista = repositorio.pokemon.value.toMutableStateList()
 
@@ -41,4 +54,5 @@ class PokemonViewModel @Inject constructor(
             repositorio.pokemon.value = lista
         }
     }
+*/
 }
