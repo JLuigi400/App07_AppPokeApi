@@ -11,6 +11,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import uacj.mx.app07_apppokeapi.ui.pantallas.PantallaPrincipal
 import uacj.mx.app07_apppokeapi.ui.theme.App07_AppPokeApiTheme
 
 class MainActivity : ComponentActivity() {
@@ -20,28 +21,17 @@ class MainActivity : ComponentActivity() {
         setContent {
             App07_AppPokeApiTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
-                        name = "Android",
-                        modifier = Modifier.padding(innerPadding)
-                    )
+                    PantallaPrincipal(modificador = Modifier.padding(innerPadding))
                 }
             }
         }
     }
 }
 
-@Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
-}
-
 @Preview(showBackground = true)
 @Composable
 fun GreetingPreview() {
     App07_AppPokeApiTheme {
-        Greeting("Android")
+        PantallaPrincipal()
     }
 }

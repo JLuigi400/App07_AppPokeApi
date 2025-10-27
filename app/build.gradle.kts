@@ -3,13 +3,13 @@ plugins {
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
 
-    // Para Integrar KSP
+    // Para integrar KSP
     alias(libs.plugins.kotlin.ksp)
 
-    // Para ingregrar en el proyecto hilt
+    // Para integrar en el proyecto Hilt
     id("com.google.dagger.hilt.android")
 
-    //Plugins para Parcelizar
+    // Plugins para parcelizar
     alias(libs.plugins.jetbrainsKotlinSerialization)
     alias(libs.plugins.kotlin.parcelize)
 
@@ -71,7 +71,7 @@ dependencies {
     implementation(libs.gson.converter)
     implementation(libs.login.interceptor)
 
-    // Implementa las librerias de Navigation Compose
+    //    // Implementa las librerias de Navigation Compose
     implementation(libs.androidx.navigation.compose.android)
 
     //Implementa las librerias de Kotlinx para parcelizar (o utilizar JSON)
