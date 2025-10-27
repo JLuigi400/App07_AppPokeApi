@@ -10,4 +10,8 @@ interface InterfazPokemonAPI{
 
     @GET("pokemon/{id}")
     suspend fun descargar_pokemon(@Path("id") id:Int): Pokemon
+
+    /*Aqui descarga los detalles de una ubicación especifica por ID*/
+    @GET("location/{id}")
+    suspend fun
 }
