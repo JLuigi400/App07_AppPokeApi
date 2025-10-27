@@ -1,4 +1,4 @@
-package uacj.mx.app07_apppokeapi.modelo
+package uacj.mx.app07_apppokeapi.modelo.pokemon
 
 data class Sprite(
     val back_default: String?,
